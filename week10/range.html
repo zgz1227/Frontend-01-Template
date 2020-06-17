@@ -1,0 +1,13 @@
+<!-- <div id="a">123<span>456789</span>01111111111</div>
+<script>
+  let element = document.getElementById("a")
+  let range = new Range();
+  range.setStart(element, 0);
+  range.setEnd(element, 1);
+</script> -->
+<div id="a">123<span style="background-color: pink;">456789</span>01111111111</div>
+<script>
+  let range = new Range();
+  range.setStart(document.getElementById("a").childNodes[0],3);
+  range.setEnd(document.getElementById("a").childNodes[2],3);
+</script> 

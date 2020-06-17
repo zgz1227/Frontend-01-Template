@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="a">
+    <span>1</span>
+    <p>2</p>
+    <a href="">3</a>
+    <div>4</div>
+  </div>
+</body>
+<script>
+  // 求子元素逆序
+  /*   let element = document.getElementById("a");
+  
+    function reverseChildren(element) {
+      let children = element.childNodes;
+  
+      for(let i = children.length - 1;i >=0 ; i--){
+        element.append(children[i])
+      }
+    } */
+
+  let element = document.getElementById("a");
+
+  function reverseChildren(element) {
+    let l = element.childNodes.length;
+
+    while (l-- > 0) {
+      element.appendChild(element.childNodes.length[l])
+    }
+  }
+
+  reverseChildren(element)
+
+  /*  Range API 辅助快捷API
+   Range 接口表示一个包含节点与文本节点的一部分的文档片段。
+
+ 可以用 Document 对象的 Document.createRange 方法创建 Range，也可以用 Selection 对象的 getRangeAt 方法获取 Range。另外，还可以通过 Document 对象的构造函数 Range() 来得到 Range。
+
+   Range.collapsed 只读
+ 返回一个表示 Range 的起始位置和终止位置是否相同的布尔值。
+ Range.commonAncestorContainer 只读
+ 返回完整包含 startContainer 和 endContainer 的、最深一级的节点。
+ Range.endContainer 只读
+ 返回包含 Range 终点的节点。
+ Range.endOffset 只读
+ 返回一个表示 Range 终点在 endContainer 中的位置的数字。
+ Range.startContainer 只读
+ 返回包含 Range 开始的节点。
+ Range.startOffset 只读
+ 返回一个表示 Range 起点在 startContainer 中的位置的数字。 */
+
+ //满分答案
+</script>
+
+</html>
