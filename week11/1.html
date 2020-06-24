@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .cell{
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: grey;
+      border-bottom: solid 1px white;
+      border-right: solid 1px white;
+      vertical-align:  middle;
+    }
+    #container{
+      font-size: 0;
+      width: 701px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>  
+  <script>
+    var map = new Array(10000).fill(0);
+    let container = document.getElementById("container");
+    for(let y = 0; y < 100; y++){
+      for(let x = 0; x < 100; x++) {
+        let cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.addEventListener("mouseover", () => {
+          if(mouse) {
+            if(clear) {
+              
+            }
+          }
+        })
+        container.appendChild(cell);
+      }
+    }
+
+  </script>
+</body>
+</html>

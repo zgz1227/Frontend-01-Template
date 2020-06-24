@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+/*     let enlighten = 1;
+
+    function changeLight(time, light){
+      return new Promise((resolve)=>{
+        setTimeout((resolve)=>{
+          enlighten = light
+          resolve()
+        },time)
+      })
+    }
+
+    async function go(){
+      while(true) {
+        await changeLight(1000, 1)
+        await changeLight(2000, 2)
+        await changeLight(5000, 3)
+      }
+    }
+
+    go() */
+
+    function sleep(s = 0){
+      return new Promise(function(res){
+        setTimeout(function(){
+          res();
+        },s*1000)
+      })
+    }
+
+    async function go(){
+      while(1){
+        console.log('green');
+        await sleep(10)
+        console.log('yellow');
+        await sleep(2);
+        console.log('red');
+        await sleep(5);            
+      }
+    }
+  </script>
+</body>
+</html>
